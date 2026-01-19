@@ -1,0 +1,159 @@
+/* === Загальні стилі === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* === Хедер з пошуковою формою === */
+header {
+  background-color: #0077cc;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+header input {
+  padding: 12px 16px;
+  width: 320px;
+  max-width: 90%;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+header input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.5);
+}
+
+header button {
+  padding: 12px 20px;
+  background-color: white;
+  color: #0077cc;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+header button:hover {
+  background-color: #e6f0ff;
+  transform: scale(1.05);
+}
+
+/* === Галерея зображень === */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery li {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gallery li:hover {
+  transform: scale(1.03);
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* === Кнопка Load more === */
+.load-more {
+  display: block;
+  margin: 30px auto;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: #0077cc;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.load-more:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
+
+.load-more:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* === Повідомлення про помилку === */
+.error-message {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* === Індикатор завантаження === */
+.loader {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* === Модальне вікно === */
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ReactModal__Content {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.ReactModal__Content img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.ReactModal__Content p {
+  margin: 5px 0;
+}
